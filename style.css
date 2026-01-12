@@ -1,0 +1,259 @@
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e; 
+            color: #e6e6e6; 
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        h2 {
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            color: #64ffda; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #33334f;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .site-header {
+            display: flex;
+                justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #1a1a2e;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+
+        .main-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 1.0em;
+            padding: 5px 10px;
+            transition: color 0.3s, background-color 0.3s, border-radius 0.3s;
+        }
+
+        .main-nav a:hover {
+            color: #64ffda;
+            background-color: #33334f;
+            border-radius: 4px;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 50px;
+            display: grid;
+            grid-template-areas: 
+                "image about"
+                "image skill"
+                "image project"
+                "contact contact";
+            grid-template-columns: 350px 1fr;
+            gap: 60px;
+        }
+
+        .profile-section {
+            grid-area: image;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+
+        .profile-image {
+            width: 300px; 
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover; 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+            border: 3px solid #64ffda; 
+            transition: transform 0.3s;
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.03);
+        }
+
+        .about-section {
+            grid-area: about;
+            padding-top: 50px;
+        }
+
+        .skill-section {
+            grid-area: skill;
+        }
+
+        .project-section {
+            grid-area: project;
+        
+            margin-top: -100px; 
+            padding-left: 50px; 
+        }
+
+        .contact-section {
+            grid-area: contact;
+            text-align: center;
+            padding: 50px 0 20px 0;
+            border-top: 1px solid #33334f;
+        }
+        
+        .skill-list {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .skill-item {
+            width: 70px; 
+            height: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8em;
+            border-radius: 8px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(100, 255, 218, 0.3);
+        }
+        
+        .html5 { background-color: #e34c26; font-size: 0.8em; }
+        .javascript { background-color: #f0db4f; color: black; }
+        .css3 { background-color: #264de4; } 
+
+        .html5::after { content: 'HTML'; font-size: 0.4em; position: absolute; bottom: 5px; }
+        .javascript::after { content: 'JS'; font-size: 0.4em; position: absolute; bottom: 5px; color: black;}
+        .css3::after { content: 'CSS'; font-size: 0.4em; position: absolute; bottom: 5px; }
+
+
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .project-card {
+            width: 350px;
+            min-height: 120px;
+            background-color: #33334f;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+            border-left: 5px solid #64acff;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .project-card:hover {
+            background-color: #4a4a6b;
+            transform: translateY(-3px);
+        }
+        
+        .project-name {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #64ffda;
+            margin-bottom: 5px;
+        }
+        
+        .project-description {
+            font-size: 0.95em;
+            color: #cccccc;
+        }
+        
+        .contact-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .contact-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #4a4a6b; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.0em;
+            color: #ffffff;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .contact-link:hover {
+            background-color: #64ffda;
+            color: #1a1a2e;
+            transform: scale(1.1);
+        }
+
+        .site-footer {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #999999;
+            background-color: #111122;
+        }
+
+        @media (max-width: 992px) {
+            .main-content {
+                grid-template-areas: 
+                    "image"
+                    "about"
+                    "skill"
+                    "project"
+                    "contact";
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .site-header {
+                padding: 15px 20px;
+            }
+
+            .main-nav a {
+                margin-left: 15px;
+            }
+            
+            .project-section {
+                padding-left: 0;
+                margin-top: 0;
+            }
+
+            .profile-section {
+                padding-top: 20px;
+            }
+
+            .project-card {
+                width: 100%;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+        }
+    
